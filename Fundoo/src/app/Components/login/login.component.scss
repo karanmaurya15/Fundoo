@@ -1,0 +1,126 @@
+.header{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container1{
+
+    width: 23%;
+    height: 50%;
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+}
+
+.fundoo{
+    width: 100%;
+    height: 20%;
+    margin-top: 50px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.F{
+    width: 4%;
+    height:fit-content;
+    font-size: 20px;
+    color: #4285F4;
+}
+.U{
+    width: 4%;
+    height:fit-content;
+    font-size: 20px;
+    color: #DB4437;
+}
+.N{
+    width: 4%;
+    height:fit-content;
+    font-size: 20px;
+    color: #F4B400;
+}
+.D{
+    width: 4%;
+    height:fit-content;
+    font-size: 20px;
+    color: #4285F4;
+}
+.O{
+    width: 4%;
+    height:fit-content;
+    font-size: 20px;
+    color: #0F9D58;
+}
+.O{
+    width: 4%;
+    height:fit-content;
+    font-size: 20px;
+    color: #DB4437;
+}
+
+.login{
+    margin-top: 15px;
+    width: 100%;
+    height: 20%;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .continue{
+     margin-top: 10px;
+     width: 100%;
+     height: 20%;
+     font-size: 16px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.inputform{
+    margin-top: 20px;
+    width: 100%;
+    height: 33vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.email{
+    
+    margin-top: 10px;
+    width: 90%;
+    height: 6vh;
+}
+.password{
+    margin-top: 20px;
+    width: 90%;
+    height: 6vh;
+}
+
+.forgotpassword{
+    margin-top: 20px;
+    display: flex;
+    align-self: flex-start;
+    margin-left: 20px;
+}
+
+.Signin{
+    margin-top: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 160px;
+}
+
+.createaccount{
+    color: #4285F4;
+}
+
