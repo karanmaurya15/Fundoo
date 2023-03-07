@@ -1,126 +1,143 @@
-.header{
-    
-    display: flex;
+.Container{
+    max-width: 100%;
+    min-width: 20%;
+    min-height: 30%;
+    max-height: 100%;
+    height: 100%;
+    display:flex;
     justify-content: center;
     align-items: center;
 }
-
-.container1{
-
-    width: 23%;
-    height: 50%;
+.Div{
+    border:2.5px solid rgb(230, 230, 230);
+    height: 60%;
+    padding: 35px 25px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
 }
-
-.card{
+.InnerDiv{
+    display:block;
     width: 100%;
-    height: 100%;
 }
-
-.fundoo{
-    width: 100%;
-    height: 20%;
-    margin-top: 50px;
-    font-weight: bold;
+.funDo{
+    font-size: 30px;
+    padding-top: 5px;
+    padding-bottom: 25px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    
 }
-
 .F{
-    width: 4%;
-    height:fit-content;
-    font-size: 20px;
-    color: #4285F4;
+    color: #1a73e8;
 }
-.U{
-    width: 4%;
-    height:fit-content;
-    font-size: 20px;
-    color: #DB4437;
+.u{
+    color: red;
 }
-.N{
-    width: 4%;
-    height:fit-content;
-    font-size: 20px;
-    color: #F4B400;
+.n{
+    color: yellow;
 }
 .D{
-    width: 4%;
-    height:fit-content;
-    font-size: 20px;
-    color: #4285F4;
+    color: #1a73e8;
 }
-.O{
-    width: 4%;
-    height:fit-content;
-    font-size: 20px;
-    color: #0F9D58;
+.o{
+    color:green;
 }
-.O{
-    width: 4%;
-    height:fit-content;
-    font-size: 20px;
-    color: #DB4437;
+.oo{
+    color:red;
 }
-
-.login{
-    margin-top: 15px;
-    width: 100%;
-    height: 20%;
-    font-size: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.span{
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 20px;
 }
-
- .continue{
-     margin-top: 10px;
-     width: 100%;
-     height: 20%;
-     font-size: 16px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-}
-
-.inputform{
-    margin-top: 20px;
-    width: 100%;
-    height: 33vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.font{
+    font-size: 16px;
 }
 .email{
-    
-    margin-top: 10px;
-    width: 90%;
-    height: 6vh;
+    width: 100%;
+    padding-bottom: 0px;
 }
 .password{
-    margin-top: 20px;
-    width: 90%;
-    height: 6vh;
+    width: 100%;
+    height: 60px;
+}
+.Forgot{
+    font-size: 16px;
+    font-style: normal;
+    margin-bottom: 35px;
+    padding-top: 5px;
+    border-radius: 0px;
+    color: #1a73e8;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: .25px;
+    outline: 0;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: inherit;
+    text-align: left;
+    border: 0;
 }
 
-.forgotpassword{
-    margin-top: 20px;
-    display: flex;
-    align-self: flex-start;
-    margin-left: 20px;
-}
-
-.Signin{
-    margin-top: 50px;
-    margin-left: 5px;
-    margin-right: 5px;
+.matButton{
     display: flex;
     flex-direction: row;
-    gap: 160px;
+    align-items: center;
+    margin-top: 25px;
+    padding: 5px 0px;
+    padding-left: 0px;
+    
+}
+.register{
+    font-size: 16px;
+    font-style: normal;
+    margin-bottom: 16px;
+    padding-top: 5px;
+    border-radius: 4px;
+    color: #1a73e8;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: .25px;
+    outline: 0;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+    text-align: left;
+    border: 0;
+    :hover{
+        background-color:#f2f5f9;
+        border-radius: 4px;
+    }
 }
 
-.createaccount{
-    color: #4285F4;
+
+.mat-raised-button{
+    background-color:#1a73e8;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: none;
+    cursor: pointer;  
+    margin-left: auto; 
+    :hover {
+        background-color:#0248a5;
+        color: white;
+      }
+}
+@media (max-width:1025px) {
+    .Container {
+        width: auto;
+        height: auto;
+    }
+    .Div{
+        width: auto;
+        height: auto;
+    }
 }
 
