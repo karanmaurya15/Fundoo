@@ -142,3 +142,38 @@
     align-items: center;
     width: 70%;
 }
+@media only screen and (max-width :1120px){
+    .para{
+       font-size: 10px;
+   }
+   .Firstdiv{
+       height: auto;
+       width: auto;
+   }
+   .imagediv{
+    width: auto;
+    height: auto;
+   }
+}
+@media only screen and (max-width :900px){
+    .imagediv{
+        display: none;
+    }
+}
+@media only screen and (max-width :700px){
+    .name{
+        flex-direction: column;
+    }
+    .name-mat{
+        width:100%;
+        margin-right: 0px;
+    }
+    .user-name{
+      width: 100%; 
+    }
+    .name{
+        width:100%
+    }
+    
+}
+
