@@ -12,6 +12,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { ForgotPasswordComponent } from './Components/forgot-password/forgot-password.component';
 
 
 
@@ -20,7 +21,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     AppComponent,
     LoginComponent,
     RegistrationComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
