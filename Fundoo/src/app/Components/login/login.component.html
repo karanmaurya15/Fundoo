@@ -15,17 +15,19 @@
       <p class="font"> to continue to Fundoo </p>
     </div>
     <div class="InnerDiv">
-      <form>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div>
           <mat-form-field appearance="outline" class="email">
             <mat-label>Email</mat-label>
             <input matInput placeholder="Email" formControlName="email">
+            <mat-error>Enter valid Email</mat-error>
           </mat-form-field>
         </div>
         <div>
           <mat-form-field appearance="outline" class="password">
             <mat-label>Password</mat-label>
             <input matInput placeholder="Password" formControlName="password">
+            <mat-error>Password is required</mat-error>
           </mat-form-field>
         </div>
         <button class="Forgot"><b>Forgot Password?</b></button>

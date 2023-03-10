@@ -9,7 +9,7 @@
             <b class="o-o">o</b>
         </div>
         <div class="InnerDiv">
-            <form>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                 <div class="div">
                     <span>
                         <h1 class="account">Create your Fundoo Account</h1>
