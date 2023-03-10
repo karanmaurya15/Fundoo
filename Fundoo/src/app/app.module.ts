@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './Components/login/login.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegisterComponent } from './Components/register/register.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { ForgotPasswordComponent } from './Components/forgot-password/forgot-password.component';
 
@@ -14,7 +15,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RegisterComponent } from './Components/register/register.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -31,7 +32,7 @@ import { RegisterComponent } from './Components/register/register.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,MatFormFieldModule,MatButtonModule,MatInputModule,MatCheckboxModule,
-    FormsModule,ReactiveFormsModule
+    FormsModule,ReactiveFormsModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

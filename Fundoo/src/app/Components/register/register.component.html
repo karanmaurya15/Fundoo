@@ -19,15 +19,18 @@
                         <mat-form-field appearance="outline" class="name-mat">
                             <mat-label>First name</mat-label>
                             <input matInput placeholder="" formControlName="firstname">
+                            <mat-error>firstname is required</mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="outline" class="last-name">
                             <mat-label>Last name</mat-label>
                             <input matInput placeholder="" formControlName="lastname">
+                            <mat-error>lastname is required</mat-error>
                         </mat-form-field>
                     </div>
                     <mat-form-field appearance="outline" class="user-name">
                         <mat-label>Username</mat-label>
                         <input matInput placeholder="" formControlName="email">
+                        <mat-error>Username is required</mat-error>
                     </mat-form-field>
                     <div class="caption">
                         <p>You can use letters , numbers & periods </p>
@@ -36,6 +39,7 @@
                         <mat-form-field appearance="outline" class="name-mat">
                             <mat-label>Password</mat-label>
                             <input matInput placeholder="" formControlName="password">
+                            <mat-error>Password is required</mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="outline" class="last-name">
                             <mat-label>Confirm</mat-label>
@@ -61,7 +65,7 @@
                     <img class="image" src="../assets/account.svg" alt="">
                 </div>
                 <div class="para">
-                    <p>One account. All of FunDoo working for you.</p>
+                    <p>One account. All of Fundoo working for you.</p>
                 </div>
             </div>
         </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/Services/userservices/user.service';
 
 @Component({
   selector: 'app-register',
@@ -7,11 +8,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  
+
   registerForm !: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private userService: UserService) { }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
@@ -23,9 +24,9 @@ export class RegisterComponent implements OnInit {
     });
   }
   onSubmit() {
-  
+
     if (this.registerForm.valid) {
-      console.log('login',this.registerForm.value);
+      console.log('login', this.registerForm.value);
 
       let data = {
         firstname: this.registerForm.value.firstname,
@@ -34,9 +35,12 @@ export class RegisterComponent implements OnInit {
         password: this.registerForm.value.password,
         confirmPassword: this.registerForm.value.confirmPassword
       }
+      this.userService.register(data).subscribe((response: any) => {
+        console.log(response)
+      })
     }
     else
-    console.log("not shown")
+      console.log("no data")
 
   }
 }
