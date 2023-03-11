@@ -10,19 +10,19 @@ export class UserService {
   constructor(private httpService: HttpService) { }
   register(data: any) {
     const httpOptions = {
-      header: new HttpHeaders({
+      headers: new HttpHeaders({
         'Content-type': 'application/json',
         //Authorization : 'token' 
       })
     }
     console.log(data);
-    return this.httpService.PostService('user/userSingUp', data, false, httpOptions);
+    return this.httpService.PostService('user/userSignUp', data, false, httpOptions);
 
   }
 
   login(reqpayload: any) {
     const httpOptions = {
-      header: new HttpHeaders({
+      headers: new HttpHeaders({
         'Content-type': 'application/json',
         //Authorization : 'token' 
       })
@@ -31,10 +31,27 @@ export class UserService {
     return this.httpService.PostService('user/login', reqpayload, false, httpOptions);
 
   }
-  forgotpassword() {
+  forgotpassword(payload:any) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        //Authorization : 'token' 
+      })
+    }
+    console.log(payload);
+    return this.httpService.PostService('user/ResetPassword', payload, false, httpOptions);
 
   }
-  resetpassword() {
+  resetpassword(payload:any) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        //Authorization : 'token' 
+      })
+    }
+    console.log(payload);
+    return this.httpService.PostService('user/reset-password', payload, false, httpOptions);
 
   }
 }
+

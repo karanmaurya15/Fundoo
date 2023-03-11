@@ -28,14 +28,14 @@ export class RegisterComponent implements OnInit {
     if (this.registerForm.valid) {
       console.log('login', this.registerForm.value);
 
-      let data = {
-        firstname: this.registerForm.value.firstname,
-        lastname: this.registerForm.value.lastname,
+      let payload = {
+        firstName: this.registerForm.value.firstname,
+        lastName: this.registerForm.value.lastname,
         email: this.registerForm.value.email,
         password: this.registerForm.value.password,
-        confirmPassword: this.registerForm.value.confirmPassword
+        Service : "advance"
       }
-      this.userService.register(data).subscribe((response: any) => {
+      this.userService.register(payload).subscribe((response: any) => {
         console.log(response)
       })
     }

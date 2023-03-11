@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/Services/userservices/user.service';
 
 @Component({
   selector: 'app-reset-password',
@@ -10,7 +11,7 @@ export class ResetPasswordComponent implements OnInit {
   resetPasswordForm !: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private userService: UserService) { }
 
   ngOnInit() {
     this.resetPasswordForm = this.formBuilder.group({
@@ -20,10 +21,15 @@ export class ResetPasswordComponent implements OnInit {
   }
   onSubmit() {
     console.log('login', this.resetPasswordForm.value);
-
-    let data = {
-      password: this.resetPasswordForm.value.password,
-      confirmpassword: this.resetPasswordForm.value.confirmPassword
+    if (this.resetPasswordForm.valid) {
+      let payload = {
+        password: this.resetPasswordForm.value.password,
+        confirmpassword: this.resetPasswordForm.value.confirmPassword,
+        service: "advance"
+      }
+      this.userService.resetpassword(payload).subscribe((reponse: any) => {
+        console.log(reponse)
+      })
     }
   }
 }
