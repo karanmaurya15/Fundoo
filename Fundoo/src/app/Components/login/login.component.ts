@@ -24,7 +24,8 @@ export class LoginComponent implements OnInit {
 
       let reqData = {
         email: this.loginForm.value.email,
-        password: this.loginForm.value.password
+        password: this.loginForm.value.password,
+        service : "advance"
       }
       this.userService.login(reqData).subscribe((response: any) => {
         console.log(response)

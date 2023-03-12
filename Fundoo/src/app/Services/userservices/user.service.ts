@@ -9,7 +9,7 @@ export class UserService {
 
   constructor(private httpService: HttpService) { }
   register(data: any) {
-    const httpOptions = {
+    let httpOptions = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
         //Authorization : 'token' 
@@ -39,7 +39,7 @@ export class UserService {
       })
     }
     console.log(payload);
-    return this.httpService.PostService('user/ResetPassword', payload, false, httpOptions);
+    return this.httpService.PostService('user/reset', payload, false, httpOptions);
 
   }
   resetpassword(payload:any) {

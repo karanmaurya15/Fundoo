@@ -24,8 +24,8 @@ export class ResetPasswordComponent implements OnInit {
     if (this.resetPasswordForm.valid) {
       let payload = {
         password: this.resetPasswordForm.value.password,
-        confirmpassword: this.resetPasswordForm.value.confirmPassword,
-        service: "advance"
+        confirmpassword: this.resetPasswordForm.value.confirmpassword,
+        service : "advance" 
       }
       this.userService.resetpassword(payload).subscribe((reponse: any) => {
         console.log(reponse)

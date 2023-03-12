@@ -16,6 +16,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
 
 
 
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     ResetPasswordComponent,
     ForgotPasswordComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -13,7 +13,7 @@ const routes: Routes = [
   {path:'forgot-password',component:ForgotPasswordComponent}
 ];
 
-@NgModule({
+@NgModule({ 
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
