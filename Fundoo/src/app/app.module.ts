@@ -19,6 +19,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { CreateNoteComponent } from './Components/create-note/create-note.component';
+import { IconComponent } from './Components/icon/icon.component';
 
 
 @NgModule({
@@ -28,13 +32,16 @@ import { MatIconModule } from '@angular/material/icon';
     ResetPasswordComponent,
     ForgotPasswordComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    CreateNoteComponent,
+    IconComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,MatFormFieldModule,MatButtonModule,MatInputModule,MatCheckboxModule,
-    FormsModule,ReactiveFormsModule,HttpClientModule,MatToolbarModule,MatIconModule
+    FormsModule,ReactiveFormsModule,HttpClientModule,MatToolbarModule,MatIconModule,MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
