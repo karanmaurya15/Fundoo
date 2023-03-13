@@ -38,12 +38,13 @@
                     <div class="name">
                         <mat-form-field appearance="outline" class="name-mat">
                             <mat-label>Password</mat-label>
-                            <input  matInput placeholder="" formControlName="password">
+                            <input matInput placeholder="" formControlName="password"
+                                [type]="showPassword ? 'text' : 'password'">
                             <mat-error>Password is required</mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="outline" class="last-name">
                             <mat-label>Confirm</mat-label>
-                            <input matInput placeholder="" formControlName="confirmPassword">
+                            <input matInput placeholder="" formControlName="confirmPassword" [type]="showConfirmPassword ? 'text' : 'password'">
                             <mat-error>Confirm Password is required</mat-error>
                         </mat-form-field>
                     </div>
@@ -51,11 +52,11 @@
                         <p>Use 8 or more characters with a mix of letters, numbers & symbols</p>
                     </div>
                     <div class="CheckBox">
-                        <mat-checkbox class="check">Show password
-                        </mat-checkbox>
+                        <mat-checkbox class="check" (change)="showPassword = !showPassword; showConfirmPassword = !showConfirmPassword">Show password</mat-checkbox>
+                        <!-- <mat-checkbox class="check" (change)="showConfirmPassword = !showConfirmPassword">Show password</mat-checkbox> -->
                     </div>
                     <div class="matButton">
-                        <button class="login"  routerLink="/login"><b>Sign in instead</b></button>
+                        <button class="login" routerLink="/login"><b>Sign in instead</b></button>
                         <button class="mat-raised-button" color="primary">Next</button>
                     </div>
                 </div>
