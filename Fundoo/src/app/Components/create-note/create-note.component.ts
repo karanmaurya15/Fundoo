@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/Services/userservices/user.service';
+import { NoteService } from 'src/app/Services/noteservice/note.service';
 
 @Component({
   selector: 'app-create-note',
@@ -12,7 +12,7 @@ export class CreateNoteComponent {
   title : any;
   description: any;
 
-  constructor( private userService: UserService) { }
+  constructor( private noteService: NoteService) { }
   Show() {
     this.isShow = true;
   }
@@ -26,7 +26,7 @@ export class CreateNoteComponent {
         "title":this.title,
         "description": this.description
       }
-      this.userService.register(reqpayload).subscribe((response: any) => {
+      this.noteService.createNote(reqpayload).subscribe((response: any) => {
         console.log(response)
       })
   }

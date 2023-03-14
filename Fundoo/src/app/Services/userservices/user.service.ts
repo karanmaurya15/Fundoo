@@ -6,13 +6,15 @@ import { HttpService } from '../http.service';
   providedIn: 'root'
 })
 export class UserService {
-
-  constructor(private httpService: HttpService) { }
+token: any;
+  constructor(private httpService: HttpService) {
+    // this.token=localStorage.getItem('token')
+   }
   register(data: any) {
     let httpOptions = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
-        //Authorization : 'token' 
+        // Authorization : 'token '
       })
     }
     console.log(data);
@@ -24,11 +26,11 @@ export class UserService {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
-        //Authorization : 'token' 
+        // Authorization : this.token  
       })
     }
     console.log(reqpayload);
-    return this.httpService.PostService('user/login', reqpayload, false, httpOptions);
+    return this.httpService.PostService('user/login', reqpayload, true, httpOptions);
 
   }
   forgotpassword(payload:any) {

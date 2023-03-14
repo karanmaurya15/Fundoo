@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
       }
       this.userService.login(reqData).subscribe((response: any) => {
         console.log(response)
+         localStorage.setItem('token',response.id);
       })
     }
     else 
