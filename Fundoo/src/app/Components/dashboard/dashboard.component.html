@@ -1,7 +1,7 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
     <mat-toolbar class="example-toolbar">
         <div>
-            <button mat-icon-button matTooltip="Main menu" style="border:0px;" mat-icon-button (click)="snav.toggle()">
+            <button mat-icon-button (click)="snav.toggle()">
                 <mat-icon>menu</mat-icon>
             </button>
         </div>
@@ -46,7 +46,7 @@
 
         <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
             fixedTopGap="56">
-          
+
             <mat-nav-list>
                 <a mat-list-item>
                     <div style="display: flex; align-items: center;">
@@ -56,8 +56,7 @@
                 </a>
                 <a mat-list-item>
                     <div style="display: flex; align-items: center;">
-                        <img class="rem"
-                        src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48.svg">
+                        <img class="rem" src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48.svg">
                         <span style="margin-left: 10px;">Remainder</span>
                     </div>
                 </a>
@@ -68,9 +67,7 @@
                         <span style="margin-left: 10px;">Edit Lables</span>
                     </div>
                 </a>
-
-                <!-- <a mat-list-item><img class="arcv"
-                        src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg">Archive</a> -->
+                
                 <a mat-list-item>
                     <div style="display: flex; align-items: center;">
                         <img class="arcv" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg">

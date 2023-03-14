@@ -1,14 +1,14 @@
 <div class="note-container">
 
     <div *ngIf="isShow">
-        <input class="title" placeholder="Title">
+        <input matInput [(ngModel)]="title" class="title" placeholder="Title">
         <img class="pin" src="../../../assets/pin note.svg">
     </div>
 
     <div class="takeNotes" [ngClass]="{'hidden': !isShow}" (click)="Show()">
 
         <div>
-            <input class="note-field" type="text" placeholder="Take a note...">
+            <input matInput [(ngModel)]="description" class="note-field" type="text" placeholder="Take a note...">
 
         </div>
 
@@ -27,6 +27,6 @@
         <div>
             <app-icon> </app-icon>
         </div>
-        <button (click)="Close()" class="close">Close</button>
+        <button (click)="Close()" class="close"><h4>Close</h4></button>
     </div>
 </div>
