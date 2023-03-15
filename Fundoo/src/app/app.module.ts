@@ -10,6 +10,8 @@ import { RegisterComponent } from './Components/register/register.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { ForgotPasswordComponent } from './Components/forgot-password/forgot-password.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import { DisplayNoteComponent } from './Components/display-note/display-note.component';
+import { GetAllNoteComponent } from './Components/get-all-note/get-all-note.component';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
@@ -23,8 +25,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { CreateNoteComponent } from './Components/create-note/create-note.component';
 import { IconComponent } from './Components/icon/icon.component';
-import { DisplayNoteComponent } from './Components/display-note/display-note.component';
-import { GetAllNoteComponent } from './Components/get-all-note/get-all-note.component';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -45,7 +46,7 @@ import { GetAllNoteComponent } from './Components/get-all-note/get-all-note.comp
     AppRoutingModule,
     BrowserAnimationsModule,MatFormFieldModule,MatButtonModule,MatInputModule,MatCheckboxModule,
     FormsModule,ReactiveFormsModule,HttpClientModule,MatToolbarModule,MatIconModule,MatSidenavModule,
-    MatListModule
+    MatListModule,MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -24,9 +24,16 @@
         </div>
     </div>
     <div *ngIf="isShow" class="close-icon">
+
+        <!-- <mat-sidenav-content>
+            <app-icon> </app-icon>
+        </mat-sidenav-content> -->
+
         <div>
             <app-icon> </app-icon>
         </div>
-        <button (click)="Close()" class="close"><h4>Close</h4></button>
+        <button (click)="Close()" class="close">
+            <h4>Close</h4>
+        </button>
     </div>
 </div>

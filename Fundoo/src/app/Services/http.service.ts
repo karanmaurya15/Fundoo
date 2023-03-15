@@ -13,8 +13,8 @@ export class HttpService {
   PostService(endpoint: string, reqpayload: any, token: boolean, httpHeadersOptions: any) {
     return this.httpClient.post(this.baseUrl + endpoint,reqpayload,token&& httpHeadersOptions);
   }
-  GetService() {
-  
+  GetService(endpoint:string,token: boolean,httpHeadersOptions: any) {
+   return this.httpClient.get(this.baseUrl + endpoint,token && httpHeadersOptions)
   }
   PutService() {
 
