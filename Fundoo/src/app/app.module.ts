@@ -26,7 +26,7 @@ import { MatListModule } from '@angular/material/list';
 import { CreateNoteComponent } from './Components/create-note/create-note.component';
 import { IconComponent } from './Components/icon/icon.component';
 import { MatCardModule } from '@angular/material/card';
-
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -46,7 +46,7 @@ import { MatCardModule } from '@angular/material/card';
     AppRoutingModule,
     BrowserAnimationsModule,MatFormFieldModule,MatButtonModule,MatInputModule,MatCheckboxModule,
     FormsModule,ReactiveFormsModule,HttpClientModule,MatToolbarModule,MatIconModule,MatSidenavModule,
-    MatListModule,MatCardModule
+    MatListModule,MatCardModule,MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

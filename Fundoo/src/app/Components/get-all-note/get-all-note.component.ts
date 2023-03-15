@@ -11,10 +11,12 @@ export class GetAllNoteComponent implements OnInit {
   noteArray=[]
   constructor (private noteService:NoteService){}
   ngOnInit(){  
+    this.GetAllNote()
   }
    GetAllNote(){
        this.noteService.getAllNotes().subscribe((response:any)=>{
-        this.noteArray=response.data
+        console.log(response)
+        this.noteArray=response.data.data
         console.log(this.noteArray);
        })
    }
