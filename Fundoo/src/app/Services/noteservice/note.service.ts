@@ -7,27 +7,39 @@ import { HttpService } from '../http.service';
 })
 export class NoteService {
   token: any;
-  constructor(private httpService: HttpService) { this.token=localStorage.getItem('token') }
+  constructor(private httpService: HttpService) { this.token = localStorage.getItem('token') }
 
-  createNote(reqpayload:any){
-    this.token= localStorage.getItem('token')
+  createNote(reqpayload: any) {
+    this.token = localStorage.getItem('token')
     let httpOptions = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
-        Authorization : this.token 
+        Authorization: this.token
       })
     }
-    return this.httpService.PostService('notes/addNotes',reqpayload, true, httpOptions);
+    return this.httpService.PostService('notes/addNotes', reqpayload, true, httpOptions);
   }
 
-  getAllNotes(){
-    this.token= localStorage.getItem('token')
+  getAllNotes() {
+    this.token = localStorage.getItem('token')
     let httpOptions = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
-        Authorization : this.token 
+        Authorization: this.token
       })
     }
     return this.httpService.GetService('notes/getNotesList', true, httpOptions)
+  }
+
+  trashNoteService(data: any) {
+    console.log(data)
+    this.token= localStorage.getItem('token')
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        Authorization: this.token
+      })
+    };
+    return this.httpService.PostService('notes/trashNotes',data,true,httpOptions)
   }
 }

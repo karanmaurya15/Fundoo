@@ -10,6 +10,7 @@ import { RegisterComponent } from './Components/register/register.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { ForgotPasswordComponent } from './Components/forgot-password/forgot-password.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import { IconComponent } from './Components/icon/icon.component';
 import { DisplayNoteComponent } from './Components/display-note/display-note.component';
 import { GetAllNoteComponent } from './Components/get-all-note/get-all-note.component';
 
@@ -24,9 +25,9 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { CreateNoteComponent } from './Components/create-note/create-note.component';
-import { IconComponent } from './Components/icon/icon.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+
 
 @NgModule({
   declarations: [

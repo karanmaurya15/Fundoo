@@ -6,21 +6,24 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HttpService {
 
-  baseUrl:string= 'http://fundoonotes.incubation.bridgelabz.com/api/';
+  baseUrl: string = 'http://fundoonotes.incubation.bridgelabz.com/api/';
 
   constructor(private httpClient: HttpClient) { }
 
   PostService(endpoint: string, reqpayload: any, token: boolean, httpHeadersOptions: any) {
-    return this.httpClient.post(this.baseUrl + endpoint,reqpayload,token&& httpHeadersOptions);
+    return this.httpClient.post(this.baseUrl + endpoint, reqpayload, token && httpHeadersOptions);
   }
-  GetService(endpoint:string,token: boolean,httpHeadersOptions: any) {
-   return this.httpClient.get(this.baseUrl + endpoint,token && httpHeadersOptions)
+  GetService(endpoint: string, token: boolean, httpHeadersOptions: any) {
+    return this.httpClient.get(this.baseUrl + endpoint, token && httpHeadersOptions)
   }
   PutService() {
 
   }
-  DeleteService() {
-    
+  // DeleteService(endpoint: string, reqData: any, token: boolean, httpHeadersOptions: any) {
+  //   return this.httpClient.delete(this.baseUrl+ endpoint, reqData,token && httpHeadersOptions)
+
   }
-  
-}
+
+
+
+

@@ -18,16 +18,16 @@
         <img src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" alt="Archive icon" width="20px" title="Archive">
     </button>
 
-    <button mat-icon-button class="button">
-        <img src="../../../assets/createnoteicon/more_vert_FILL0_wght400_GRAD0_opsz48.svg" alt="options icon" width="20px" title="More">
-        <mat-menu >
-            <button mat-menu-item >Delete Note</button>
-            <button mat-menu-item>Add label</button>
-            <button mat-menu-item>Add drawing </button>
-            <button mat-menu-item>Make a copy</button>
-            <button mat-menu-item>Show checkboxes</button>
-            <button mat-menu-item>Copy to Google Docs</button>
-        </mat-menu>
-    </button>
+    <div>
+        <img [matMenuTriggerFor]="menu" src="../../../assets/createnoteicon/more_vert_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="deleteNote()">Delete note</button>
+      <button mat-menu-item>Add label</button>
+      <button mat-menu-item>Add drawing</button>
+      <button mat-menu-item>Make a copy</button>
+      <button mat-menu-item>Show tick boxes</button>
+      <button mat-menu-item>Copy to Google docs</button>
+    </mat-menu>
+      </div>
 
 </div>
