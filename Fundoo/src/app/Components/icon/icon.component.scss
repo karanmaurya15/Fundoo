@@ -1,7 +1,18 @@
 .resuable-icons{
     display: flex;
-    flex-direction: row;
-}
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  img {
+    width: 20px;
+    height: 16px;
+    margin-top: 15px;
+    margin-left:10px;
+    margin-right: 10px;
+  }
+ 
 
 
 

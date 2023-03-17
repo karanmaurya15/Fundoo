@@ -13,6 +13,7 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { IconComponent } from './Components/icon/icon.component';
 import { DisplayNoteComponent } from './Components/display-note/display-note.component';
 import { GetAllNoteComponent } from './Components/get-all-note/get-all-note.component';
+import { UpdateNoteComponent } from './Components/update-note/update-note.component';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
@@ -27,6 +28,8 @@ import { MatListModule } from '@angular/material/list';
 import { CreateNoteComponent } from './Components/create-note/create-note.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 
 @NgModule({
@@ -40,14 +43,15 @@ import { MatMenuModule } from '@angular/material/menu';
     CreateNoteComponent,
     IconComponent,
     DisplayNoteComponent,
-    GetAllNoteComponent
+    GetAllNoteComponent,
+    UpdateNoteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,MatFormFieldModule,MatButtonModule,MatInputModule,MatCheckboxModule,
     FormsModule,ReactiveFormsModule,HttpClientModule,MatToolbarModule,MatIconModule,MatSidenavModule,
-    MatListModule,MatCardModule,MatMenuModule
+    MatListModule,MatCardModule,MatMenuModule,MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

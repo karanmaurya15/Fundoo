@@ -42,4 +42,17 @@ export class NoteService {
     };
     return this.httpService.PostService('notes/trashNotes',data,true,httpOptions)
   }
+  
+  updateNote(data:any){
+    this.token= localStorage.getItem('token')
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        Authorization: this.token
+      })
+    };
+    return this.httpService.PutService('notes/xzc%20xd%20c/user/notes/xd%20c',data,true)
+
+  }
 }
+

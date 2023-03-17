@@ -1,33 +1,36 @@
 <div class="resuable-icons">
-    <button mat-icon-button class="button" >
-        <img src="../../../assets/createnoteicon/add_alert_FILL0_wght400_GRAD0_opsz48.svg" alt="remind me icon" width="20px" title="Remind me">
-    </button>
-    <button mat-icon-button class="button">
-        <img src="../../../assets/createnoteicon/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt="add collaborator icon" width="20px"
+    <div>
+        <img src="../../../assets/createnoteicon/add_alert_FILL0_wght400_GRAD0_opsz48.svg" alt="remind me icon"
+            title="Remind me">
+    </div>
+    <div>
+        <img src="../../../assets/createnoteicon/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt="add collaborator icon"
             title="Collaborator">
-    </button>
-    <button mat-icon-button class="button">
-        <img src="../../../assets/createnoteicon/palette_FILL0_wght400_GRAD0_opsz48.svg" alt="color icon" width="20px" title="Background options">
+    </div>
+    <div>
+        <img src="../../../assets/createnoteicon/palette_FILL0_wght400_GRAD0_opsz48.svg" alt="color icon"
+            title="Background options">
 
-    </button>
-    <button mat-icon-button class="button">
-        <img src="../../../assets/createnoteicon/image_FILL0_wght400_GRAD0_opsz48.svg" alt="image icon" width="20px"
+    </div>
+    <div>
+        <img src="../../../assets/createnoteicon/image_FILL0_wght400_GRAD0_opsz48.svg" alt="image icon"
             title="Add image">
-    </button>
-    <button mat-icon-button class="button">
-        <img src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" alt="Archive icon" width="20px" title="Archive">
-    </button>
+    </div>
+    <div>
+        <img src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" alt="Archive icon" title="Archive">
+    </div>
 
     <div>
-        <img [matMenuTriggerFor]="menu" src="../../../assets/createnoteicon/more_vert_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item (click)="deleteNote()">Delete note</button>
-      <button mat-menu-item>Add label</button>
-      <button mat-menu-item>Add drawing</button>
-      <button mat-menu-item>Make a copy</button>
-      <button mat-menu-item>Show tick boxes</button>
-      <button mat-menu-item>Copy to Google docs</button>
-    </mat-menu>
-      </div>
+        <img [matMenuTriggerFor]="menu" src="../../../assets/createnoteicon/more_vert_FILL0_wght400_GRAD0_opsz48.svg"
+            alt="" />
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="deleteNote()">Delete note</button>
+            <button mat-menu-item>Add label</button>
+            <button mat-menu-item>Add drawing</button>
+            <button mat-menu-item>Make a copy</button>
+            <button mat-menu-item>Show tick boxes</button>
+            <button mat-menu-item>Copy to Google docs</button>
+        </mat-menu>
+    </div>
 
 </div>

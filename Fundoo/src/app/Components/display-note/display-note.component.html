@@ -1,15 +1,15 @@
 <div class="display">
     <div class="notes" *ngFor="let note of noteList">
         <div class="row">
-            <div class="title">
-                <p>{{note.title}}</p>
+            <div class="title" (click)="openDialog(note)">
+                {{note.title}}
             </div>
             <div class="pin">
                 <img class="pin" src="../../../assets/pin note.svg">
             </div>
         </div>
-        <div class="description">
-            <p>{{note.description}}</p>
+        <div class="description" (click)="openDialog(note)">
+            {{note.description}}
         </div>
         <div>
         </div>

@@ -4,14 +4,11 @@
         <input matInput [(ngModel)]="title" class="title" placeholder="Title">
         <img class="pin" src="../../../assets/pin note.svg">
     </div>
-
     <div class="takeNotes" [ngClass]="{'hidden': !isShow}" (click)="Show()">
-
         <div>
             <input matInput [(ngModel)]="description" class="note-field" type="text" placeholder="Take a note...">
 
         </div>
-
         <div *ngIf="!isShow" class="Icons">
             <button mat-icon-button matTooltip="New list">
                 <img src="../../../assets/newList.svg">
