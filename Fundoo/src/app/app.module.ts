@@ -29,6 +29,7 @@ import { CreateNoteComponent } from './Components/create-note/create-note.compon
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
+import { TrashNoteComponent } from './Components/trash-note/trash-note.component';
 
 
 
@@ -44,7 +45,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     IconComponent,
     DisplayNoteComponent,
     GetAllNoteComponent,
-    UpdateNoteComponent
+    UpdateNoteComponent,
+    TrashNoteComponent
   ],
   imports: [
     BrowserModule,

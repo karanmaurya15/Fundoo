@@ -33,25 +33,35 @@ export class NoteService {
 
   trashNoteService(data: any) {
     console.log(data)
-    this.token= localStorage.getItem('token')
+    this.token = localStorage.getItem('token')
     let httpOptions = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
         Authorization: this.token
       })
     };
-    return this.httpService.PostService('notes/trashNotes',data,true,httpOptions)
+    return this.httpService.PostService('notes/trashNotes', data, true, httpOptions)
   }
-  
-  updateNote(data:any){
-    this.token= localStorage.getItem('token')
+  trashNoteListService() {
+    console.log(this.token);
+    let httpOption = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        Authorization: this.token,
+      }),
+    };
+    return this.httpService.GetService('notes/getTrashNotesList',true,httpOption);
+  }
+
+  updateNote(data: any) {
+    this.token = localStorage.getItem('token')
     let httpOptions = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
         Authorization: this.token
       })
     };
-    return this.httpService.PutService('notes/xzc%20xd%20c/user/notes/xd%20c',data,true)
+    return this.httpService.PostService('notes/updateNotes', data, true,httpOptions)
 
   }
 }

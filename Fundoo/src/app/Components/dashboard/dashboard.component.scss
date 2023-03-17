@@ -89,36 +89,100 @@ h1.example-app-name {
     margin-left: 0px;
 }
 
-.note {
-    padding-left: 12px;
-    padding-right: 20px;
-    height: 25px;
-}
 
-.rem {
-    padding-left: 12px;
-    padding-right: 20px;
-    height: 25px;
-}
+.example-sidenav-container {
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .mat-sidenav {
+    width: 270px;
+    // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: white;
+  }
+  
+  .mat-nav-list {
+    padding: 0;
+  }
+  
+  .mat-list-item {
+    height: 56px;
+    padding: 0 16px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #202124;
+    // border-radius: 0;
+    border-top-right-radius: 20px;
+
+  }
+  
+  .mat-list-item:hover {
+    background-color: #e3e3e3;
+  }
+  
+  .mat-list-item.active {
+    background-color: #cb1a1a;
+    color: #d9f442;
+  }
+  
+  .note {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .rem {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .label {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .arcv {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .trash {
+    width: 24px;
+    height: 24px;
+  }
+  
+
+// .note {
+//     padding-left: 12px;
+//     padding-right: 20px;
+//     height: 25px;
+// }
+
+// .rem {
+//     padding-left: 12px;
+//     padding-right: 20px;
+//     height: 25px;
+// }
 
 
-.label {
-    padding-left: 12px;
-    padding-right: 20px;
-    height: 25px;
-}
+// .label {
+//     padding-left: 12px;
+//     padding-right: 20px;
+//     height: 25px;
+// }
 
-.arcv {
-    padding-left: 12px;
-    padding-right: 20px;
-    height: 25px;
-}
+// .arcv {
+//     padding-left: 12px;
+//     padding-right: 20px;
+//     height: 25px;
+// }
 
-.trash {
-    padding-left: 12px;
-    padding-right: 20px;
-    height: 25px;
-}
+// .trash {
+//     padding-left: 12px;
+//     padding-right: 20px;
+//     height: 25px;
+// }
 
 
 
