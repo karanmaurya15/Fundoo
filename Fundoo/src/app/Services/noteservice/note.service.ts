@@ -62,7 +62,17 @@ export class NoteService {
       })
     };
     return this.httpService.PostService('notes/updateNotes', data, true,httpOptions)
-
+  }
+  ArchiveNoteService(data:any){
+    console.log(this.token)
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        Authorization: this.token
+      })
+    };
+    return this.httpService.PostService('notes/archiveNotes', data, true,httpOptions)
+ 
   }
 }
 

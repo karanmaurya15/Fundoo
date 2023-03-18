@@ -6,6 +6,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    
 }
 
 .example-is-mobile .example-toolbar {
@@ -97,7 +98,7 @@ h1.example-app-name {
   
   .mat-sidenav {
     width: 270px;
-    // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     background-color: white;
   }
   
@@ -105,28 +106,8 @@ h1.example-app-name {
     padding: 0;
   }
   
-  .mat-list-item {
-    height: 56px;
-    padding: 0 16px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    color: #202124;
-    // border-radius: 0;
-    border-top-right-radius: 20px;
+  
 
-  }
-  
-  .mat-list-item:hover {
-    background-color: #e3e3e3;
-  }
-  
-  .mat-list-item.active {
-    background-color: #cb1a1a;
-    color: #d9f442;
-  }
-  
   .note {
     width: 24px;
     height: 24px;
@@ -152,38 +133,7 @@ h1.example-app-name {
     height: 24px;
   }
   
-
-// .note {
-//     padding-left: 12px;
-//     padding-right: 20px;
-//     height: 25px;
-// }
-
-// .rem {
-//     padding-left: 12px;
-//     padding-right: 20px;
-//     height: 25px;
-// }
-
-
-// .label {
-//     padding-left: 12px;
-//     padding-right: 20px;
-//     height: 25px;
-// }
-
-// .arcv {
-//     padding-left: 12px;
-//     padding-right: 20px;
-//     height: 25px;
-// }
-
-// .trash {
-//     padding-left: 12px;
-//     padding-right: 20px;
-//     height: 25px;
-// }
-
-
+  
+  
 
   

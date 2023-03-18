@@ -14,6 +14,8 @@ import { IconComponent } from './Components/icon/icon.component';
 import { DisplayNoteComponent } from './Components/display-note/display-note.component';
 import { GetAllNoteComponent } from './Components/get-all-note/get-all-note.component';
 import { UpdateNoteComponent } from './Components/update-note/update-note.component';
+import { TrashNoteComponent } from './Components/trash-note/trash-note.component';
+import { ArchiveNoteComponent } from './Components/archive-note/archive-note.component';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
@@ -29,7 +31,7 @@ import { CreateNoteComponent } from './Components/create-note/create-note.compon
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
-import { TrashNoteComponent } from './Components/trash-note/trash-note.component';
+
 
 
 
@@ -46,7 +48,8 @@ import { TrashNoteComponent } from './Components/trash-note/trash-note.component
     DisplayNoteComponent,
     GetAllNoteComponent,
     UpdateNoteComponent,
-    TrashNoteComponent
+    TrashNoteComponent,
+    ArchiveNoteComponent
   ],
   imports: [
     BrowserModule,
