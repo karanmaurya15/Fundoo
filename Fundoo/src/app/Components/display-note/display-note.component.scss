@@ -72,5 +72,12 @@
   .notes:hover .pin {
     visibility:visible;
   }
+  @media only screen and (max-width:920px) {
+    .display {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 80px;
+    }
+}
 
   

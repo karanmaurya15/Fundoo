@@ -10,7 +10,7 @@
     background-color: white;
     width: 550px;
     margin: 35px;
-    margin-left: 300px;
+    margin-left: 400px;
 }
 .title {
     min-height: 10px;
@@ -78,11 +78,17 @@
 }
 @media only screen and (max-width:920px) {
     .note-container{
-        width: 680px;
-        margin-left: 100px;
+        width: 410px;
+        margin-left: 10px;
     }
     .Icons {
-        padding-left: 500px;
+        padding-left: 200px;
+    }
+    .title{
+        width: 70px;
+    }
+    .note-field{
+        width: 70px;
     }
 }
 

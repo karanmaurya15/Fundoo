@@ -6,7 +6,8 @@ import { NoteService } from 'src/app/Services/noteservice/note.service';
   templateUrl: './create-note.component.html',
   styleUrls: ['./create-note.component.scss']
 })
-export class CreateNoteComponent {
+export class CreateNoteComponent implements OnInit{
+  ngOnInit(){}
  
   isShow: boolean = false;
   title : any;
