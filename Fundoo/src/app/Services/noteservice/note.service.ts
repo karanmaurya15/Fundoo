@@ -84,5 +84,17 @@ export class NoteService {
     };
     return this.httpService.GetService('notes/getArchiveNotesList',true,httpOption);
   }
+
+  ColorService(data: any){
+    this.token= localStorage.getItem('token')
+    let httpOption ={
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+       Authorization: this.token,
+    })
+  };
+
+  return this.httpService.PostService('notes/changesColorNotes', data, true, httpOption)
+  }
 }
 

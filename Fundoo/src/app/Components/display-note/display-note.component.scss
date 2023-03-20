@@ -5,9 +5,12 @@
   }
   
   .notes {
-    border: 1px;
-    border-color: #2f3133;
-    box-shadow: 1px 1px 1px 1px gray;
+    // border: 1px;
+    // border-color: #2f3133;
+    // box-shadow: 1px 1px 1px 1px gray;
+    border: 1px solid;
+    border-color: rgb(224, 220, 220);
+    // box-shadow: 1px 1px 3px 3px rgba(157, 167, 170, 0.215);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -20,7 +23,8 @@
   }
   
   .notes:hover {
-    box-shadow: 1px 1px 3px 3px gray;
+    // box-shadow: 1px 1px 3px 3px gray;
+    box-shadow: 1px 1px 3px 3px rgba(157, 167, 170, 0.215);
   }
   
   .row {

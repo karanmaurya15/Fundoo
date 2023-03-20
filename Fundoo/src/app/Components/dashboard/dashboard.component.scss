@@ -15,14 +15,21 @@
     z-index: 2;
 }
 
-h1.example-app-name {
-    margin-left: 8px;
+h1{
+    // margin-left: 8px;
+    margin-left: 16px;
+    margin-top: 15px;
+    color: #393a3d;
+    opacity: 1;
+    font-family: sans-serif;
 }
 
 .example-sidenav-container {
     /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
        causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
     flex: 1;
+    width: 100%;
+    background-color: white;
 }
 
 .example-is-mobile .example-sidenav-container {
@@ -45,6 +52,7 @@ h1.example-app-name {
 .heading{
     margin-top: 12px;
     margin-left: 10px;
+    
 }
 .header {
     width: 980px;
@@ -78,8 +86,8 @@ h1.example-app-name {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    // padding-left: 320px;
-    // float: right;
+    padding-left: 320px;
+    float: right;
     position: relative;
 
 }
@@ -106,8 +114,6 @@ h1.example-app-name {
     padding: 0;
   }
   
-  
-
   .note {
     width: 24px;
     height: 24px;
@@ -131,5 +137,62 @@ h1.example-app-name {
   .trash {
     width: 24px;
     height: 24px;
+  }
+  @media only screen and (max-width:1421px) {
+    .example-toolbar{
+      width: auto;
+    }
+    
+    .example-sidenav-container{
+    width: 120vw !important;
+    
+    }
+    .example-container {
+      width: 120vw !important;
+      height: 120vh !important;
+    }
+  
+    
+  }
+  @media only screen and (max-width:920px) {
+      .example-toolbar{
+        width: auto;
+      }
+      
+      .example-sidenav-container{
+      width: 152vw !important;
+      }
+     
+      .example-container {
+        width: 152vw !important;
+        height: 152vh !important;
+      }
+  }
+
+  @media only screen and (max-width:720px) {
+    .example-toolbar{
+      width: auto;
+    }
+    .example-sidenav-container{
+    width: 158vw !important;
+    margin-top: 60px !important;
+    
+    }
+    .example-container {
+      width: 158vw !important;
+      height: 158vh !important;
+    }
+    .searchbox {
+      width: 10%;
+      margin-left: 15px;
+      
+    }
+   
+    .inputSearchbox {
+      width: 10%;
+    }
+    .icon-container{
+      margin-left: 10px;
+    }
   }
   

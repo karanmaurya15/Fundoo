@@ -31,6 +31,7 @@ import { CreateNoteComponent } from './Components/create-note/create-note.compon
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 
@@ -56,7 +57,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     AppRoutingModule,
     BrowserAnimationsModule,MatFormFieldModule,MatButtonModule,MatInputModule,MatCheckboxModule,
     FormsModule,ReactiveFormsModule,HttpClientModule,MatToolbarModule,MatIconModule,MatSidenavModule,
-    MatListModule,MatCardModule,MatMenuModule,MatDialogModule
+    MatListModule,MatCardModule,MatMenuModule,MatDialogModule,MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

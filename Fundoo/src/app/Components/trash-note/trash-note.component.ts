@@ -18,6 +18,9 @@ export class TrashNoteComponent implements OnInit{
   this.noteService.trashNoteListService().subscribe((result : any)=>{
     console.log('notes moved to trash' , result);
     this.noteArray=result.data.data;
+    this.noteArray =this.noteArray.filter((req : any) => {
+      return req.isDeleted == true
+    })
   })
  }
 }
