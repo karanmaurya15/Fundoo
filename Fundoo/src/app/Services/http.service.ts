@@ -16,9 +16,9 @@ export class HttpService {
   GetService(endpoint: string, token: boolean, httpHeadersOptions: any) {
     return this.httpClient.get(this.baseUrl + endpoint, token && httpHeadersOptions)
   }
-  // PutService(endpoint: string, token: boolean, httpHeadersOptions: any) {
-  //   return this.httpClient.put(this.baseUrl + endpoint, token && httpHeadersOptions)
-  // }
+  PutService(endpoint: string, token: boolean, httpHeadersOptions: any) {
+    return this.httpClient.put(this.baseUrl + endpoint, token && httpHeadersOptions)
+  }
   // DeleteService(endpoint: string, reqData: any, token: boolean, httpHeadersOptions: any) {
   //   return this.httpClient.delete(this.baseUrl+ endpoint, reqData,token && httpHeadersOptions)
 }

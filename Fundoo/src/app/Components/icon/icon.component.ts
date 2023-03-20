@@ -49,7 +49,7 @@ export class IconComponent implements OnInit {
     })
   }
   Color(color:any){
-   
+    this.noteCard.color=color
     let data={
       noteIdList: [this.noteCard.id],
       color:color

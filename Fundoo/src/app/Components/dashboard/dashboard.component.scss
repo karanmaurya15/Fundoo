@@ -101,19 +101,18 @@ h1{
 
 .example-sidenav-container {
     height: 100vh;
-    overflow: hidden;
+    // overflow: hidden;
   }
   
   .mat-sidenav {
     width: 270px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     background-color: white;
   }
-  
-  .mat-nav-list {
-    padding: 0;
-  }
-  
+  // ::ng-deep .mat-nav-list-item-interactive:focus{
+  //   background-color: red;
+  // }
+    
   .note {
     width: 24px;
     height: 24px;
@@ -138,6 +137,7 @@ h1{
     width: 24px;
     height: 24px;
   }
+ 
   @media only screen and (max-width:1421px) {
     .example-toolbar{
       width: auto;
@@ -152,7 +152,6 @@ h1{
       height: 120vh !important;
     }
   
-    
   }
   @media only screen and (max-width:920px) {
       .example-toolbar{
@@ -185,7 +184,6 @@ h1{
     .searchbox {
       width: 10%;
       margin-left: 15px;
-      
     }
    
     .inputSearchbox {
