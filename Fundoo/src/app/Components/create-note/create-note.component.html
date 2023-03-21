@@ -17,13 +17,19 @@
                     src="../../../assets/drawList.svg"></button>
             <button mat-icon-button matTooltip=" New note with image">
                 <img src="../../../assets/imgNote.svg"></button>
+
         </div>
     </div>
     <div *ngIf="isShow" class="close-icon">
-
         <div>
             <app-icon> </app-icon>
         </div>
+        <div class="icon2">
+            <img class="img" src="../../../assets/createnoteicon/undo_FILL0_wght400_GRAD0_opsz48.svg">
+
+            <img class="img" src="../../../assets/createnoteicon/redo_FILL0_wght400_GRAD0_opsz48.svg">
+        </div>
+
         <button (click)="Close()" class="close">
             <h4>Close</h4>
         </button>

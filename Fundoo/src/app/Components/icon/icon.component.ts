@@ -8,10 +8,13 @@ import { NoteService } from 'src/app/Services/noteservice/note.service';
 })
 export class IconComponent implements OnInit {
   @Input() noteCard: any
+  isArchived = false
+  isDeleted = false;
 
   ngOnInit() { }
   constructor(private noteService: NoteService) { }
-  colors = [
+
+  colors:Array<any> = [
     { code: '#fff', name: 'white' },
     { code: '#f28b82', name: 'red' },
     { code: '#fbbc04', name: 'orange' },
@@ -39,6 +42,7 @@ export class IconComponent implements OnInit {
     })
   }
   archiveNote() {
+    this.isArchived = true;
     let data = {
       noteIdList: [this.noteCard.id],
       isArchived: true
@@ -48,7 +52,7 @@ export class IconComponent implements OnInit {
       console.log('notes moved to archived', response);
     })
   }
-  Color(color:any){
+  setColor(color:any){
     this.noteCard.color=color
     let data={
       noteIdList: [this.noteCard.id],
@@ -58,6 +62,36 @@ export class IconComponent implements OnInit {
     this.noteService.ColorService(data).subscribe((response : any) => {
       console.log(response);
     
+    })
+  }
+  unArchiveNote(){
+    this.isArchived = false;
+    let data = {
+      noteIdList: [this.noteCard.id],
+      isArchived: false,
+    }
+    this.noteService.ArchiveNoteService(data).subscribe((response:any)=>{
+      console.log('note unarchived',response); 
+    })
+  }
+  restorenote(){
+    let data = {
+      noteIdList: [this.noteCard.id],
+      isDeleted: false,
+    }
+    this.noteService.trashNoteService(data).subscribe((response: any) => {
+      console.log('note restored',response)
+    })
+  }
+  deleteforevernote(){
+    let data ={
+      noteIdList: [this.noteCard.id],
+      isDeleted: true,
+    }
+    this.noteService.Deletenote(data).subscribe((response: any) => {
+      
+      console.log('note deleted ',response)
+      
     })
   }
 }

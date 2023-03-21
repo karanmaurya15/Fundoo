@@ -1,5 +1,5 @@
 <div class="display">
-    <div class="notes" *ngFor="let note of noteList">
+    <div class="notes" *ngFor="let note of noteList"  [style.background]="note.code">
         <div class="row">
             <div class="title" (click)="openDialog(note)">
                 {{note.title}}
@@ -12,6 +12,7 @@
             {{note.description}}
         </div>
         <div>
+
         </div>
         <div class="icon">
             <app-icon [noteCard]="note"></app-icon>

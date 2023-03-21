@@ -1,35 +1,39 @@
 <div class="resuable-icons">
-    <div>
+    <div *ngIf="!isDeleted">
         <img src="../../../assets/createnoteicon/add_alert_FILL0_wght400_GRAD0_opsz48.svg" alt="remind me icon"
             title="Remind me">
     </div>
-    <div>
+    <div *ngIf="!isDeleted">
         <img src="../../../assets/createnoteicon/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt="add collaborator icon"
             title="Collaborator">
     </div>
-    <div>
+    <div *ngIf="!isDeleted">
         <img matTooltip="Background options" [matMenuTriggerFor]="color"
         src="../../../assets/createnoteicon/palette_FILL0_wght400_GRAD0_opsz48.svg">
         <mat-menu #color="matMenu">
             <div class="background">
                 <div class="bg-color" *ngFor="let color of colors">
                     <button class="colorBoxSetting" mat-mini-fab [matTooltip]="color.name"
-                        [style.background]="color.code" (click)="Color(color.name)"></button>
+                        [style.background]="color.code" (click)="setColor(color.code)"></button>
                 </div>
             </div>
         </mat-menu>
 
     </div>
-    <div>
+    <div *ngIf="!isDeleted">
         <img src="../../../assets/createnoteicon/image_FILL0_wght400_GRAD0_opsz48.svg" alt="image icon"
             title="Add image">
     </div>
-    <div>
-        <img (click)="archiveNote()" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" alt="Archive icon"
+    <div  *ngIf="!isDeleted">
+        <img *ngIf="!isArchived" (click)="archiveNote()" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" alt="Archive icon"
             title="Archive">
     </div>
+    <div  *ngIf="!isDeleted">
+        <img *ngIf="isArchived" (click)="unArchiveNote()" src="../../../assets/unarchive.svg" alt="Archive icon"
+            title="Unarchive">
+    </div>
 
-    <div>
+    <div *ngIf="!isDeleted">
         <img [matMenuTriggerFor]="menu" src="../../../assets/createnoteicon/more_vert_FILL0_wght400_GRAD0_opsz48.svg"
             alt="" />
         <mat-menu #menu="matMenu">
@@ -41,5 +45,12 @@
             <button mat-menu-item>Copy to Google docs</button>
         </mat-menu>
     </div>
-
+</div>
+<div class="trash" *ngIf="isDeleted" >
+    <div>
+        <img src="../../../assets/DeleteForever.svg" alt="DeleteForever">
+    </div>
+    <div *ngIf="isDeleted" >
+        <img src="../../../assets/Restore.svg" alt="Restore">
+    </div>
 </div>

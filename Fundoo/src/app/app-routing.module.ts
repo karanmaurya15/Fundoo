@@ -12,6 +12,7 @@ import { TrashNoteComponent } from './Components/trash-note/trash-note.component
 
 
 const routes: Routes = [
+  {path:'',redirectTo:"/login",pathMatch:'full'},
   {path:'login',component:LoginComponent},
   {path: 'register',component:RegisterComponent},
   {path:'reset-password',component:ResetPasswordComponent},

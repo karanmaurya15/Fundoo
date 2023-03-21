@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Components/login/login.component';
 
+import { AuthguradServiceService } from './authgurad-service.service';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './Components/register/register.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
@@ -34,8 +36,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatTooltipModule} from '@angular/material/tooltip';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +59,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     FormsModule,ReactiveFormsModule,HttpClientModule,MatToolbarModule,MatIconModule,MatSidenavModule,
     MatListModule,MatCardModule,MatMenuModule,MatDialogModule,MatTooltipModule
   ],
-  providers: [],
+  providers: [
+    AuthguradServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
