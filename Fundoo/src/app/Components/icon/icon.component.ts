@@ -88,10 +88,8 @@ export class IconComponent implements OnInit {
       noteIdList: [this.noteCard.id],
       isDeleted: true,
     }
-    this.noteService.Deletenote(data).subscribe((response: any) => {
-      
+    this.noteService.Deletenote(data).subscribe((response: any) => { 
       console.log('note deleted ',response)
-      
     })
   }
 }

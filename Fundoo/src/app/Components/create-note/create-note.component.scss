@@ -94,6 +94,7 @@
     flex-direction: row;
     margin-left: -235px;
 }
+
 .img{
     width: 15px;
     height: 17px;
@@ -101,13 +102,18 @@
     margin-left:10px;
     margin-right: 10px;
 }
-:host ::ng-deep app-icon.img{
-    width: 20px;
-    height: 20px;
-    margin-top: 10px;
-    margin-left:10px;
-    margin-right: 60px;
+.style-icon{
+    height: 40%;
+    
+    display: flex;
 }
+// :host ::ng-deep app-icon.img{
+//     width: 20px;
+//     height: 20px;
+//     margin-top: 10px;
+//     margin-left:10px;
+//     margin-right: 60px;
+// }
 
 @media only screen and (max-width:920px) {
     .note-container {

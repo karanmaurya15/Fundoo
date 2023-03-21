@@ -36,5 +36,9 @@ export class DashboardComponent implements OnDestroy {
   }
 
   shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
+
+  Logout(){
+    console.log('logout')
+  }
 }
 

@@ -55,5 +55,15 @@ token: any;
     return this.httpService.PostService('user/reset-password', payload, false, httpOptions);
 
   }
+   logOut(data:any){
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        Authorization : this.token
+      })
+    }
+    console.log();
+    return this.httpService.PostService('user/logout', data, false, httpOptions);
+   }
 }
 
