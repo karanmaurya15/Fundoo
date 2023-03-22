@@ -9,7 +9,7 @@ import { NoteService } from 'src/app/Services/noteservice/note.service';
 export class ArchiveNoteComponent implements OnInit{
 
   constructor(private noteService:NoteService){}
-
+  isArchived = true;
   @Input() noteArray= []
   ngOnInit(){
     this.archiveNoteList();

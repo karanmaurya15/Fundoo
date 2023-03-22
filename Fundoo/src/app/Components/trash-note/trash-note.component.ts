@@ -19,7 +19,7 @@ export class TrashNoteComponent implements OnInit{
     console.log('notes moved to trash' , result);
     this.noteArray=result.data.data;
     this.noteArray =this.noteArray.filter((req : any) => {
-      return req.isDeleted == true
+      return req.isDeleted == true;
     })
   })
  }

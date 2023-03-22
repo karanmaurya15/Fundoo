@@ -1,5 +1,5 @@
 <div class="display">
-    <div class="notes" *ngFor="let note of noteList"  [style.background]="note.code">
+    <div class="notes" *ngFor="let note of noteList"  [style.background]="note.color">
         <div class="row">
             <div class="title" (click)="openDialog(note)">
                 {{note.title}}

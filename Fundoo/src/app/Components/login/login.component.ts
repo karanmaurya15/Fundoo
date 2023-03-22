@@ -24,7 +24,6 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     if (this.loginForm.valid) {
       console.log("login ", this.loginForm.value)
-
       let reqData = {
         email: this.loginForm.value.email,
         password: this.loginForm.value.password,

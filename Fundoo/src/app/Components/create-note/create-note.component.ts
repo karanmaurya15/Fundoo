@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NoteService } from 'src/app/Services/noteservice/note.service';
 
 @Component({
@@ -7,6 +7,9 @@ import { NoteService } from 'src/app/Services/noteservice/note.service';
   styleUrls: ['./create-note.component.scss']
 })
 export class CreateNoteComponent implements OnInit{
+  
+  @Output() messageEvent = new EventEmitter<any>();
+
   ngOnInit(){}
  
   isShow: boolean = false;
@@ -29,7 +32,9 @@ export class CreateNoteComponent implements OnInit{
       }
       this.noteService.createNote(reqpayload).subscribe((response: any) => {
         console.log(response)
+        this.messageEvent.emit(response);
       })
+      
   }
   }
 }
