@@ -14,7 +14,7 @@
         <div>
         </div>
         <div class="icon">
-            <app-icon [noteCard]="note" (messageEvent)="archiveEvent($event)"></app-icon>
+            <app-icon [noteCard]="note" [isArchived]="childIsArchive" (archiveEvent)="archiverefresh($event)" (trashEvent)="trashRefresh($event)"></app-icon>
         </div>
     </div>
 </div>

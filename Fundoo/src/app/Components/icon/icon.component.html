@@ -29,7 +29,7 @@
             title="Archive">
     </div>
     <div  *ngIf="!isDeleted">
-        <img *ngIf="isArchived" (click)="unArchiveNote()" src="../../../assets/unarchive.svg" alt="Archive icon"
+        <img *ngIf="isArchived" (click)="unArchiveNote()" src="../../../assets/unarchive.svg" alt="UnArchive icon"
             title="Unarchive">
     </div>
 
@@ -48,9 +48,11 @@
 </div>
 <div class="resuable-icons" >
     <div *ngIf="isDeleted" >
-        <img (click)="deleteforevernote()" src="../../../assets/DeleteForever.svg" alt="DeleteForever">
+        <img (click)="deleteforevernote()" src="../../../assets/DeleteForever.svg" alt="DeleteForever"
+        title="DeleteForever">
     </div>
     <div (click)="restorenote()" *ngIf="isDeleted" >
-        <img src="../../../assets/Restore.svg" alt="Restore">
+        <img src="../../../assets/Restore.svg" alt="Restore"
+        title="Restore">
     </div>
 </div>

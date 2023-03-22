@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { UpdateNoteComponent } from '../update-note/update-note.component';
 
 @Component({
@@ -8,15 +8,21 @@ import { UpdateNoteComponent } from '../update-note/update-note.component';
   styleUrls: ['./display-note.component.scss']
 })
 export class DisplayNoteComponent {
- @Input() noteList:any
+  @Input() noteList: any
+  @Input() isArchivedChild: any
+   childIsArchive: boolean= true;
+  //  title: any;
+  // description: any;
+  // note:any;
+  @Output() messageArchiveEvent = new EventEmitter<any>();
+  @Output() messageTrashEvent = new EventEmitter<any>();
+  constructor(public dialog: MatDialog) { }
+  ngOnInit() {
+    // Assign the value of isArchivedChild to isArchived property here
+    this.childIsArchive = this.isArchivedChild;
+  }
 
-//  title: any;
-// description: any;
-// note:any;
-@Output() messageEvent = new EventEmitter<any>();
-constructor(public dialog: MatDialog) {}
-
-  openDialog(note : any): void {
+  openDialog(note: any): void {
     const dialogRef = this.dialog.open(UpdateNoteComponent, {
       width: '500px',
       height: 'auto',
@@ -24,12 +30,17 @@ constructor(public dialog: MatDialog) {}
     });
 
     dialogRef.afterClosed().subscribe(response => {
-      console.log('The dialog was closed',response);
+      console.log('The dialog was closed', response);
     });
   }
 
-  archiveEvent(event:any){
-  console.log(event);
-this.messageEvent.emit(event);
+  archiverefresh(event: any) {
+    console.log(event);
+    this.messageArchiveEvent.emit(event);
+  }
+
+  trashRefresh(event: any) {
+    console.log(event);
+    this.messageTrashEvent.emit(event)
   }
 }

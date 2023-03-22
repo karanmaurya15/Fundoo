@@ -9,6 +9,7 @@ import { NoteService } from 'src/app/Services/noteservice/note.service';
 export class GetAllNoteComponent implements OnInit {
 
   noteArray = []
+  
   constructor(private noteService: NoteService) { }
   
   ngOnInit() {
@@ -32,5 +33,9 @@ export class GetAllNoteComponent implements OnInit {
   archiverefresh(event:any){
     console.log(event)
     this.GetAllNote();
+  }
+  trashrefresh(event:any){
+    console.log(event)
+    this.GetAllNote()
   }
 }

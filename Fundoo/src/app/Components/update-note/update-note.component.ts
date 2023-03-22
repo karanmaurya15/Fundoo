@@ -11,6 +11,7 @@ export class UpdateNoteComponent implements OnInit {
   title: any;
   description: any;
   id: any;
+  color:any;
   constructor(private noteService: NoteService,
     public dialogRef: MatDialogRef<UpdateNoteComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -21,14 +22,15 @@ export class UpdateNoteComponent implements OnInit {
     this.title = this.data.title;
     this.description = this.data.description;
     this.id = this.data.id;
-
+     this.color = this.data.color
   }
 
   Close() {
     let result = {
       title: this.title,
       description: this.description,
-      noteId: this.id
+      noteId: this.id,
+      backgroundColor: this.color
     }
     console.log(result)
     this.noteService.updateNote(result).subscribe((reponce: any) => {

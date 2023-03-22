@@ -8,10 +8,13 @@ import { NoteService } from 'src/app/Services/noteservice/note.service';
 })
 export class IconComponent implements OnInit {
   @Input() noteCard: any
-  isArchived = false
-  isDeleted = false;
+  @Input() isArchived: any;
+ 
+  // isArchived :boolean = false
+  isDeleted :boolean = false;
 
-  @Output() messageEvent = new EventEmitter<any>();
+  @Output() archiveEvent = new EventEmitter<any>();
+  @Output() trashEvent = new EventEmitter<any>();
 
   ngOnInit() { }
   constructor(private noteService: NoteService) { }
@@ -31,20 +34,19 @@ export class IconComponent implements OnInit {
     { code: '#e8eaed', name: 'grey' },
   ];
 
-
   deleteNote() {
     let data = {
       noteIdList: [this.noteCard.id],
       isDeleted: true
-
     }
     console.log(data)
     this.noteService.trashNoteService(data).subscribe((response: any) => {
-      console.log(response)
+      console.log(response);
+      this.trashEvent.emit(response);
     })
   }
   archiveNote() {
-    this.isArchived = true;
+    // this.isArchived = true;
     let data = {
       noteIdList: [this.noteCard.id],
       isArchived: true
@@ -52,7 +54,7 @@ export class IconComponent implements OnInit {
     console.log(data);
     this.noteService.ArchiveNoteService(data).subscribe((response: any) => {
       console.log('notes moved to archived', response);
-      this.messageEvent.emit(response);
+      this.archiveEvent.emit(response);
     })
   }
   setColor(color: any) {
@@ -68,6 +70,7 @@ export class IconComponent implements OnInit {
     })
   }
   unArchiveNote() {
+    // this.isArchived = false;
     let data = {
       noteIdList: [this.noteCard.id],
       isArchived: false,
