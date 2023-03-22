@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NoteService } from 'src/app/Services/noteservice/note.service';
 
 @Component({
@@ -11,10 +11,12 @@ export class IconComponent implements OnInit {
   isArchived = false
   isDeleted = false;
 
+  @Output() messageEvent = new EventEmitter<any>();
+
   ngOnInit() { }
   constructor(private noteService: NoteService) { }
 
-  colors:Array<any> = [
+  colors: Array<any> = [
     { code: '#fff', name: 'white' },
     { code: '#f28b82', name: 'red' },
     { code: '#fbbc04', name: 'orange' },
@@ -50,46 +52,46 @@ export class IconComponent implements OnInit {
     console.log(data);
     this.noteService.ArchiveNoteService(data).subscribe((response: any) => {
       console.log('notes moved to archived', response);
+      this.messageEvent.emit(response);
     })
   }
-  setColor(color:any){
-    this.noteCard.color=color
-    let data={
+  setColor(color: any) {
+    this.noteCard.color = color
+    let data = {
       noteIdList: [this.noteCard.id],
-      color:color
+      color: color
     }
     console.log(data);
-    this.noteService.ColorService(data).subscribe((response : any) => {
+    this.noteService.ColorService(data).subscribe((response: any) => {
       console.log(response);
-    
+
     })
   }
-  unArchiveNote(){
-    this.isArchived = false;
+  unArchiveNote() {
     let data = {
       noteIdList: [this.noteCard.id],
       isArchived: false,
     }
-    this.noteService.ArchiveNoteService(data).subscribe((response:any)=>{
-      console.log('note unarchived',response); 
+    this.noteService.ArchiveNoteService(data).subscribe((response: any) => {
+      console.log('note unarchived', response);
     })
   }
-  restorenote(){
+  restorenote() {
     let data = {
       noteIdList: [this.noteCard.id],
       isDeleted: false,
     }
     this.noteService.trashNoteService(data).subscribe((response: any) => {
-      console.log('note restored',response)
+      console.log('note restored', response)
     })
   }
-  deleteforevernote(){
-    let data ={
+  deleteforevernote() {
+    let data = {
       noteIdList: [this.noteCard.id],
       isDeleted: true,
     }
-    this.noteService.Deletenote(data).subscribe((response: any) => { 
-      console.log('note deleted ',response)
+    this.noteService.Deletenote(data).subscribe((response: any) => {
+      console.log('note deleted ', response)
     })
   }
 }

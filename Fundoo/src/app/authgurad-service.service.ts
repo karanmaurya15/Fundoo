@@ -6,4 +6,7 @@ import { Injectable } from '@angular/core';
 export class AuthguradServiceService {
 
   constructor() { }
+  gettoken(){  
+    return !!localStorage.getItem("SeesionUser");  
+    } 
 }

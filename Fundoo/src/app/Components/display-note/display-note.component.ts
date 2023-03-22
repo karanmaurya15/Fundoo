@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { UpdateNoteComponent } from '../update-note/update-note.component';
 
@@ -10,9 +10,10 @@ import { UpdateNoteComponent } from '../update-note/update-note.component';
 export class DisplayNoteComponent {
  @Input() noteList:any
 
- title: any;
-description: any;
-note:any;
+//  title: any;
+// description: any;
+// note:any;
+@Output() messageEvent = new EventEmitter<any>();
 constructor(public dialog: MatDialog) {}
 
   openDialog(note : any): void {
@@ -25,5 +26,10 @@ constructor(public dialog: MatDialog) {}
     dialogRef.afterClosed().subscribe(response => {
       console.log('The dialog was closed',response);
     });
+  }
+
+  archiveEvent(event:any){
+  console.log(event);
+this.messageEvent.emit(event);
   }
 }

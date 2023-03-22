@@ -10,6 +10,7 @@ export class GetAllNoteComponent implements OnInit {
 
   noteArray = []
   constructor(private noteService: NoteService) { }
+  
   ngOnInit() {
     this.GetAllNote()
   }
@@ -18,6 +19,7 @@ export class GetAllNoteComponent implements OnInit {
       console.log(response)
       this.noteArray = response.data.data
       console.log(this.noteArray);
+      this.noteArray=this.noteArray.reverse();
       this.noteArray = this.noteArray.filter((result: any) => {
         return result.isDeleted == false && result.isArchived == false
       });
@@ -27,5 +29,8 @@ export class GetAllNoteComponent implements OnInit {
     console.log(event);
     this.GetAllNote();
   }
-
+  archiverefresh(event:any){
+    console.log(event)
+    this.GetAllNote();
+  }
 }

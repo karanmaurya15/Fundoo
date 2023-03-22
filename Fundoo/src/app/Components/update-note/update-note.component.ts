@@ -7,31 +7,31 @@ import { NoteService } from 'src/app/Services/noteservice/note.service';
   templateUrl: './update-note.component.html',
   styleUrls: ['./update-note.component.scss']
 })
-export class UpdateNoteComponent implements OnInit{
+export class UpdateNoteComponent implements OnInit {
   title: any;
   description: any;
   id: any;
-  constructor(private noteService:NoteService,
+  constructor(private noteService: NoteService,
     public dialogRef: MatDialogRef<UpdateNoteComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
   ) {
     console.log(data)
-   }
-    ngOnInit(): void {
-      this.title=this.data.title;
-      this.description=this.data.description;
-      this.id=this.data.id
+  }
+  ngOnInit(): void {
+    this.title = this.data.title;
+    this.description = this.data.description;
+    this.id = this.data.id;
 
-    }
+  }
 
   Close() {
-    let result={
-      title:this.title,
-      description:this.description,
-      noteId:this.id
+    let result = {
+      title: this.title,
+      description: this.description,
+      noteId: this.id
     }
     console.log(result)
-     this.noteService.updateNote(result).subscribe((reponce:any)=>{
+    this.noteService.updateNote(result).subscribe((reponce: any) => {
       console.log(reponce)
     })
     this.dialogRef.close();
