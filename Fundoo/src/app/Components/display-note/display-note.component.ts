@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { DataService } from 'src/app/Services/dataservice/data.service';
 import { UpdateNoteComponent } from '../update-note/update-note.component';
 
 @Component({
@@ -7,7 +8,7 @@ import { UpdateNoteComponent } from '../update-note/update-note.component';
   templateUrl: './display-note.component.html',
   styleUrls: ['./display-note.component.scss']
 })
-export class DisplayNoteComponent {
+export class DisplayNoteComponent implements OnInit{
   @Input() noteList: any
   @Input() isArchivedChild: any
   @Input() isTrashchild: any
@@ -18,10 +19,16 @@ export class DisplayNoteComponent {
   // note:any;
   @Output() messageArchiveEvent = new EventEmitter<any>();
   @Output() messageTrashEvent = new EventEmitter<any>();
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog ,private dataService:DataService) { }
+  Search='';
   ngOnInit() {
     this.childIsTrash= this.isTrashchild
     this.childIsArchive = this.isArchivedChild;
+
+    this.dataService.searchNote.subscribe(result => {
+      console.log(result);
+    this.Search=result;
+    })
   }
 
   openDialog(note: any): void {

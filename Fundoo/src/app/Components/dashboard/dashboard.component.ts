@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
+import { DataService } from 'src/app/Services/dataservice/data.service';
 
 
 @Component({
@@ -25,7 +26,7 @@ export class DashboardComponent implements OnDestroy {
 
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher , private dataService:DataService) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -36,9 +37,13 @@ export class DashboardComponent implements OnDestroy {
   }
 
   shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
-
+    
+  searchNote(event:any){
+    console.log(event.target.value)
+    this.dataService.sendMessage(event.target.value);
+  }
   Logout(){
-    console.log('logout')
+    localStorage.removeItem('token');
+     console.log('logout successfull')   
   }
 }
-

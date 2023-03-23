@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]],
 
     });
-    // localStorage.setItem('SeesionUser',this.user)
+  
   }
   onSubmit() {
     if (this.loginForm.valid) {
