@@ -10,7 +10,9 @@ import { UpdateNoteComponent } from '../update-note/update-note.component';
 export class DisplayNoteComponent {
   @Input() noteList: any
   @Input() isArchivedChild: any
+  @Input() isTrashchild: any
    childIsArchive: boolean= true;
+   childIsTrash: boolean= true;
   //  title: any;
   // description: any;
   // note:any;
@@ -18,7 +20,7 @@ export class DisplayNoteComponent {
   @Output() messageTrashEvent = new EventEmitter<any>();
   constructor(public dialog: MatDialog) { }
   ngOnInit() {
-    // Assign the value of isArchivedChild to isArchived property here
+    this.childIsTrash= this.isTrashchild
     this.childIsArchive = this.isArchivedChild;
   }
 

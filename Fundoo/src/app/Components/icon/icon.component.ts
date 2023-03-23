@@ -9,9 +9,10 @@ import { NoteService } from 'src/app/Services/noteservice/note.service';
 export class IconComponent implements OnInit {
   @Input() noteCard: any
   @Input() isArchived: any;
+  @Input() isDeleted: any;
  
   // isArchived :boolean = false
-  isDeleted :boolean = false;
+  // isDeleted :boolean = false;
 
   @Output() archiveEvent = new EventEmitter<any>();
   @Output() trashEvent = new EventEmitter<any>();

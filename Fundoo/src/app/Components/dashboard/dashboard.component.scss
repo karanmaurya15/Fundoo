@@ -1,203 +1,191 @@
 .example-container {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
 }
 
 .example-is-mobile .example-toolbar {
-    position: fixed;
-    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
-    z-index: 2;
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
 }
 
 h1{
-    // margin-left: 8px;
-    margin-left: 16px;
-    margin-top: 15px;
-    color: #393a3d;
-    opacity: 1;
-    font-family: sans-serif;
+  // margin-left: 8px;
+  margin-left: 16px;
+  margin-top: 15px;
+  color: #393a3d;
+  opacity: 1;
+  font-family: sans-serif;
 }
 
 .example-sidenav-container {
-    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
-       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
-    flex: 1;
-    width: 100%;
-    background-color: white;
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+  width: 100%;
+  background-color: white;
 }
 
 .example-is-mobile .example-sidenav-container {
-    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
-       `<body>` to be our scrolling element for mobile layouts. */
-    flex: 1 0 auto;
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
 }
 
 .example-toolbar {
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    //align-content: space-around;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  //align-content: space-around;
 }
 
 .logo {
-    width: 52px;
-    height: 52px;
+  width: 52px;
+  height: 52px;
 }
 .heading{
-    margin-top: 12px;
-    margin-left: 10px;
-    
+  margin-top: 12px;
+  margin-left: 10px;
+  
 }
 .header {
-    width: 980px;
+  width: 980px;
 }
 
 .searchbox {
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    padding-top: 5px;
-    background: #f1f3f4;
-    border: 1px solid transparent;
-    border-radius: 7px;
-    width: 600px;
-    height: 35px;
-    color: #2d2e2f;
-    margin-left: 80px;
-    outline: none;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  padding-top: 5px;
+  background: #f1f3f4;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  width: 600px;
+  height: 35px;
+  color: #2d2e2f;
+  margin-left: 80px;
+  outline: none;
 }
 
 .inputSearchbox {
-    height: 25px;
-    border: 0px;
-    background: none;
-    width: 500px;
-    font-size: large;
-    outline: none;
+  height: 25px;
+  border: 0px;
+  background: none;
+  width: 500px;
+  font-size: large;
+  outline: none;
 }
 
 .icon-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-left: 320px;
-    float: right;
-    position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-left: 320px;
+  float: right;
+  position: relative;
 
 }
 
 .icon img {
-    height: 25px;
-    width: 25px;
-    margin-left: 0px;
+  height: 25px;
+  width: 25px;
+  margin-left: 0px;
 }
 
 
 .example-sidenav-container {
-    height: 100vh;
-    // overflow: hidden;
-  }
-  
-  .mat-sidenav {
-    width: 270px;
-    // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    background-color: white;
-  }
-  // ::ng-deep .mat-nav-list-item-interactive:focus{
-  //   background-color: red;
-  // }
-    
-  .note {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .rem {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .label {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .arcv {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .trash {
-    width: 24px;
-    height: 24px;
-  }
-  .list{
-    display: flex;
-     align-items: center;
-  }
-  .span{
-    margin-left: 20px;
-  }
- 
-  @media only screen and (max-width:1421px) {
-    .example-toolbar{
-      width: auto;
-    }
-    
-    .example-sidenav-container{
-    width: 120vw !important;
-    
-    }
-    .example-container {
-      width: 120vw !important;
-      height: 120vh !important;
-    }
-  
-  }
-  @media only screen and (max-width:920px) {
-      .example-toolbar{
-        width: auto;
-      }
-      
-      .example-sidenav-container{
-      width: 152vw !important;
-      }
-     
-      .example-container {
-        width: 152vw !important;
-        height: 152vh !important;
-      }
-  }
+  height: 100vh;
+  // overflow: hidden;
+}
 
-  @media only screen and (max-width:720px) {
+.mat-sidenav {
+  width: 270px;
+  // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+// ::ng-deep .mat-nav-list-item-interactive:focus{
+//   background-color: red;
+// }
+  
+.note {
+  width: 24px;
+  height: 24px;
+}
+
+.rem {
+  width: 24px;
+  height: 24px;
+}
+
+.label {
+  width: 24px;
+  height: 24px;
+}
+
+.arcv {
+  width: 24px;
+  height: 24px;
+}
+
+.trash {
+  width: 24px;
+  height: 24px;
+}
+.list{
+  display: flex;
+   align-items: center;
+}
+.span{
+  margin-left: 20px;
+}
+
+
+@media only screen and (max-width:920px) {
     .example-toolbar{
       width: auto;
     }
-    .example-sidenav-container{
-    width: 158vw !important;
-    margin-top: 60px !important;
     
-    }
-    .example-container {
-      width: 158vw !important;
-      height: 158vh !important;
-    }
-    .searchbox {
-      width: 10%;
-      margin-left: 15px;
+    .example-sidenav-container{
+    width: 152vw !important;
     }
    
-    .inputSearchbox {
-      width: 10%;
+    .example-container {
+      width: 152vw !important;
+      height: 152vh !important;
     }
-    .icon-container{
-      margin-left: 10px;
+    .header {
+      width: 600px;
     }
+}
+
+@media only screen and (max-width:720px) {
+  .example-toolbar{
+    width: auto;
   }
+  .example-sidenav-container{
+  width: 158vw !important;
+  margin-top: 60px !important;
   
+  }
+  .example-container {
+    width: 158vw !important;
+    height: 158vh !important;
+  }
+  .searchbox {
+    width: 10%;
+    margin-left: 15px;
+  }
+ 
+  .inputSearchbox {
+    width: 10%;
+  }
+  .icon-container{
+    margin-left: 10px;
+  }
+}

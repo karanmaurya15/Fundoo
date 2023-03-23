@@ -8,6 +8,7 @@ import { NoteService } from 'src/app/Services/noteservice/note.service';
 })
 export class TrashNoteComponent implements OnInit {
   @Input() noteArray: any = [];
+  @Input() isDeleted = true;
   constructor(private noteService: NoteService) { }
 
   ngOnInit(): void {

@@ -1,14 +1,14 @@
 <div class="resuable-icons">
-    <div *ngIf="!isDeleted">
-        <img src="../../../assets/createnoteicon/add_alert_FILL0_wght400_GRAD0_opsz48.svg" alt="remind me icon"
+    <div>
+        <img  *ngIf="!isDeleted" src="../../../assets/createnoteicon/add_alert_FILL0_wght400_GRAD0_opsz48.svg" alt="remind me icon"
             title="Remind me">
     </div>
-    <div *ngIf="!isDeleted">
-        <img src="../../../assets/createnoteicon/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt="add collaborator icon"
+    <div >
+        <img *ngIf="!isDeleted" src="../../../assets/createnoteicon/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt="add collaborator icon"
             title="Collaborator">
     </div>
-    <div *ngIf="!isDeleted">
-        <img matTooltip="Background options" [matMenuTriggerFor]="color"
+    <div >
+        <img *ngIf="!isDeleted" matTooltip="Background options" [matMenuTriggerFor]="color"
         src="../../../assets/createnoteicon/palette_FILL0_wght400_GRAD0_opsz48.svg">
         <mat-menu #color="matMenu">
             <div class="background">
@@ -20,21 +20,21 @@
         </mat-menu>
 
     </div>
-    <div *ngIf="!isDeleted">
-        <img src="../../../assets/createnoteicon/image_FILL0_wght400_GRAD0_opsz48.svg" alt="image icon"
+    <div >
+        <img *ngIf="!isDeleted" src="../../../assets/createnoteicon/image_FILL0_wght400_GRAD0_opsz48.svg" alt="image icon"
             title="Add image">
     </div>
-    <div  *ngIf="!isDeleted">
-        <img *ngIf="!isArchived" (click)="archiveNote()" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" alt="Archive icon"
+    <div >
+        <img *ngIf="!isArchived && !isDeleted" (click)="archiveNote()" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" alt="Archive icon"
             title="Archive">
     </div>
-    <div  *ngIf="!isDeleted">
-        <img *ngIf="isArchived" (click)="unArchiveNote()" src="../../../assets/unarchive.svg" alt="UnArchive icon"
+    <div >
+        <img *ngIf="isArchived && !isDeleted" (click)="unArchiveNote()" src="../../../assets/unarchive.svg" alt="UnArchive icon"
             title="Unarchive">
     </div>
 
-    <div *ngIf="!isDeleted">
-        <img [matMenuTriggerFor]="menu" src="../../../assets/createnoteicon/more_vert_FILL0_wght400_GRAD0_opsz48.svg"
+    <div >
+        <img  *ngIf="!isDeleted" [matMenuTriggerFor]="menu" src="../../../assets/createnoteicon/more_vert_FILL0_wght400_GRAD0_opsz48.svg"
             alt="" />
         <mat-menu #menu="matMenu">
             <button mat-menu-item (click)="deleteNote()">Delete note</button>
@@ -46,13 +46,13 @@
         </mat-menu>
     </div>
 </div>
-<div class="resuable-icons" >
-    <div *ngIf="isDeleted" >
-        <img (click)="deleteforevernote()" src="../../../assets/DeleteForever.svg" alt="DeleteForever"
+<div class="trashicon">
+    <div *ngIf="isDeleted">
+        <img   (click)="deleteforevernote()" src="../../../assets/DeleteForever.svg" alt="DeleteForever"
         title="DeleteForever">
     </div>
-    <div (click)="restorenote()" *ngIf="isDeleted" >
-        <img src="../../../assets/Restore.svg" alt="Restore"
+    <div *ngIf="isDeleted"  >
+        <img  (click)="restorenote()"src="../../../assets/Restore.svg"  alt="Restore"
         title="Restore">
     </div>
 </div>

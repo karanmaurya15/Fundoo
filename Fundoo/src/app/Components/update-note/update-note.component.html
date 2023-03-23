@@ -7,7 +7,7 @@
             <input [style.background]="data.color" class="description" [(ngModel)]="description" placeholder="note">
         </div>
         <div class="icon">
-            <app-icon> </app-icon>
+            <app-icon [noteCard]="data"> </app-icon>
             <button  [style.background]="data.color" mat-button (click)="Close()" class="closeButton">Close</button>
         </div>
     </div>
