@@ -34,6 +34,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { FilterPipe } from './pipes/filter.pipe';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -50,14 +52,15 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     GetAllNoteComponent,
     UpdateNoteComponent,
     TrashNoteComponent,
-    ArchiveNoteComponent
+    ArchiveNoteComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,MatFormFieldModule,MatButtonModule,MatInputModule,MatCheckboxModule,
     FormsModule,ReactiveFormsModule,HttpClientModule,MatToolbarModule,MatIconModule,MatSidenavModule,
-    MatListModule,MatCardModule,MatMenuModule,MatDialogModule,MatTooltipModule
+    MatListModule,MatCardModule,MatMenuModule,MatDialogModule,MatTooltipModule,MatSnackBarModule
   ],
   providers: [
     AuthguradServiceService

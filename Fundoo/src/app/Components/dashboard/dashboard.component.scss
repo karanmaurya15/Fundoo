@@ -87,8 +87,8 @@ h1{
   flex-direction: row;
   justify-content: space-evenly;
   padding-left: 320px;
-  float: right;
-  position: relative;
+  // float: right;
+  // position: relative;
 
 }
 
@@ -160,7 +160,10 @@ h1{
       height: 152vh !important;
     }
     .header {
-      width: 600px;
+      width: auto;
+    }
+    .icon-container{
+      padding-left: 0px;
     }
 }
 
@@ -178,14 +181,19 @@ h1{
     height: 158vh !important;
   }
   .searchbox {
-    width: 10%;
+    width: auto;
     margin-left: 15px;
   }
- 
+  .header {
+    width: 30px;
+  }
   .inputSearchbox {
-    width: 10%;
+    width:5%;
   }
   .icon-container{
     margin-left: 10px;
+  }
+  .icon-container{
+    padding-left: 20px;
   }
 }

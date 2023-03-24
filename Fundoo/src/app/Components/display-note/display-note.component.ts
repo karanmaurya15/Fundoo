@@ -20,14 +20,14 @@ export class DisplayNoteComponent implements OnInit{
   @Output() messageArchiveEvent = new EventEmitter<any>();
   @Output() messageTrashEvent = new EventEmitter<any>();
   constructor(public dialog: MatDialog ,private dataService:DataService) { }
-  Search='';
+  search: any;
   ngOnInit() {
     this.childIsTrash= this.isTrashchild
     this.childIsArchive = this.isArchivedChild;
 
     this.dataService.searchNote.subscribe(result => {
       console.log(result);
-    this.Search=result;
+    this.search=result;
     })
   }
 

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { NoteService } from 'src/app/Services/noteservice/note.service';
 
 @Component({
@@ -6,17 +7,17 @@ import { NoteService } from 'src/app/Services/noteservice/note.service';
   templateUrl: './create-note.component.html',
   styleUrls: ['./create-note.component.scss']
 })
-export class CreateNoteComponent implements OnInit{
-  
+export class CreateNoteComponent implements OnInit {
+
   @Output() messageEvent = new EventEmitter<any>();
 
-  ngOnInit(){}
- 
+  ngOnInit() { }
+
   isShow: boolean = false;
-  title : any;
+  title: any;
   description: any;
 
-  constructor( private noteService: NoteService) { }
+  constructor(private noteService: NoteService, private snackBar: MatSnackBar) { }
   Show() {
     this.isShow = true;
   }
@@ -26,15 +27,17 @@ export class CreateNoteComponent implements OnInit{
     if ((this.title != null && this.title != "") || (this.description != null && this.description != "")) {
       console.log(this.title, this.description)
 
-      let reqpayload ={
-        "title":this.title,
+      let reqpayload = {
+        "title": this.title,
         "description": this.description
       }
       this.noteService.createNote(reqpayload).subscribe((response: any) => {
         console.log(response)
         this.messageEvent.emit(response);
+        this.snackBar.open('Note created  Successfully', '', {
+          duration: 1000,
+        });
       })
-      
-  }
+    }
   }
 }
