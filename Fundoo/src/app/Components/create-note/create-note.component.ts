@@ -37,6 +37,8 @@ export class CreateNoteComponent implements OnInit {
         this.snackBar.open('Note created  Successfully', '', {
           duration: 1000,
         });
+        this.title = null;
+        this.description = null;
       })
     }
   }

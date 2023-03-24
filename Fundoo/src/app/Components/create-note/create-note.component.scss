@@ -107,18 +107,12 @@
     
     display: flex;
 }
-// :host ::ng-deep app-icon.img{
-//     width: 20px;
-//     height: 20px;
-//     margin-top: 10px;
-//     margin-left:10px;
-//     margin-right: 60px;
-// }
+
 
 @media only screen and (max-width:920px) {
     .note-container {
         width: 410px;
-        margin-left: 10px;
+        margin-left: 100px;
     }
 
     .Icons {
@@ -132,23 +126,30 @@
     .note-field {
         width: 70px;
     }
+    .icon2{
+        visibility: hidden;
+    }
+
 }
 
 @media only screen and (max-width:620px) {
     .note-container {
-        width: 410px;
-        margin-left: 10px;
+        width: 380px;
+        margin-left: 0px;
     }
 
     .Icons {
-        padding-left: 200px;
+        padding-left: 210px;
     }
 
     .title {
-        width: 70px;
+        width: 40px;
     }
 
     .note-field {
-        width: 70px;
+        width: 65px;
+    }
+    .icon2{
+        visibility: hidden;
     }
 }

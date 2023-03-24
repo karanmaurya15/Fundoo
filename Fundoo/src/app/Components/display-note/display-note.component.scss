@@ -5,12 +5,8 @@
   }
   
   .notes {
-    // border: 1px;
-    // border-color: #2f3133;
-    // box-shadow: 1px 1px 1px 1px gray;
     border: 1px solid;
     border-color: rgb(224, 220, 220);
-    // box-shadow: 1px 1px 3px 3px rgba(157, 167, 170, 0.215);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -20,6 +16,8 @@
     padding-left: 10px;
     padding-right: 10px;
     background-color: white;
+    height: min-content; 
+    
   }
   
   .notes:hover {
@@ -63,6 +61,7 @@
   .notes {
     margin: 10px;
     width: 240px;
+    
   }
   
   .pin img {
@@ -88,5 +87,15 @@
       width: auto;
     }
 }
-
+@media only screen and (max-width:620px) {
+  .display {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+  }
+  .notes {
+    margin: 10px;
+    width: 330px;
+  }
+}
   
